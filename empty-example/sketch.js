@@ -99,7 +99,6 @@ function mouseClicked() {
   for (i = 0; i < word_array.length; i++) {
     if (Math.sqrt(Math.pow(word_pos_array[i][0] - mouseX, 2) + Math.pow(word_pos_array[i][1] - mouseY, 2)) < 50) {
       loading = 2
-      console.log(word_array[i])
       main_word = word_array[i]
       main_word_pos = word_pos_array[i]
       main_word_size = 1
