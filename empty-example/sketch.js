@@ -118,7 +118,7 @@ function mouseClicked() {
 }
 
 function createWeb() {
-  background(255)
+  background(205)
   textStyle(BOLD);
   for (i = 0; i < word_array.length; i++) {
 		var angle = (360/word_array.length*i)*Math.PI/180
