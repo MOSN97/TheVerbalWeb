@@ -46,7 +46,7 @@ function draw() {
     if (main_word_size > 1.4995) {
       background(255)
     } else {
-      background(255, 20*main_word_size)
+      background(255, Math.pow(15, main_word_size))
     }
     main_word_pos[0] += 0.1*(960 - main_word_pos[0])
     main_word_pos[1] += 0.1*(420 - main_word_pos[1])
