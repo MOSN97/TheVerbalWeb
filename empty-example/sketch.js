@@ -98,11 +98,14 @@ function mouseClicked() {
   }
   for (i = 0; i < word_array.length; i++) {
     if (Math.sqrt(Math.pow(word_pos_array[i][0] - mouseX, 2) + Math.pow(word_pos_array[i][1] - mouseY, 2)) < 50) {
-      loading = 2
+      loading = 17
       main_word = word_array[i]
       main_word_pos = word_pos_array[i]
       main_word_size = 1
-      loadJSON("https://api.wordassociations.net/associations/v1.0/json/search?apikey=3f656073-1927-47ed-ba4b-aee3e9b7b271&text=" + main_word + "&lang=en&type=stimulus&limit=16", wordAssociations);
+      for (b = 0; b < word_array.length; b++) {
+      	loadJSON("https://api.wordassociations.net/associations/v1.0/json/search?apikey=3f656073-1927-47ed-ba4b-aee3e9b7b271&text=" + word_array[b] + "&lang=en&type=stimulus&limit=16", wordAssociations);	
+      }
+      //loadJSON("https://api.wordassociations.net/associations/v1.0/json/search?apikey=3f656073-1927-47ed-ba4b-aee3e9b7b271&text=" + main_word + "&lang=en&type=stimulus&limit=16", wordAssociations);
       loadJSON("https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/Search/WebSearchAPI?rapidapi-key=112dee0dbamsh566862e33c248b7p19c882jsnf0a59bdb8dc8&pageNumber=1&q=" + main_word + "&autoCorrect=false&pageSize=20", searchResults)
       return
     }
