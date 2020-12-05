@@ -32,7 +32,6 @@ function setup() {
       temp_search_pos[1] += 75
     }
   }
-  console.log(search_pos_array)
   createWeb();
   // location.replace(search_array[0])
 	// for (i = 0; i < word_array.length; i++) {
